@@ -37,7 +37,7 @@ async def on_ready():
                 user = bot.get_user(475741103132377101)
                 await user.send('['+str(xx['id'])+']''['+str(xx['super'])+'] '+xx['message'])
                 mass2.append(xx['super'])       
-        print("next")
+        #print("next")
 
 
         
@@ -55,7 +55,7 @@ async def send_vk(ctx,id,super,delete='yes',*,some_text):
     if delete == 'yes':
         collection.delete_one({'super':int(super)})
     print(mass2)
-    mass2.remove(int(super)) #remove значение #pop индекс
+    mass2.remove(int(super))
 
 bot.run(os.environ['dstoken'] )
 
